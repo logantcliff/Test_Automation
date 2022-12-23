@@ -7,6 +7,11 @@ const {chromium} = require('playwright');
     const input = await page.$('.new-todo')
     await input.type('Task_1', {delay : 75})
     await input.press('Enter')
+    await input.type('Task_2', {delay : 75})
+    await input.press('Enter')
+    await page.screenshot({path:'04_Task/todo.png'})
+    await browser.close()
+
 
     // await page.fill('input[type = "email"]', 'qacamp.acad@gmail.com')
     // await page.press('input[type = "email"]', 'Tab')
